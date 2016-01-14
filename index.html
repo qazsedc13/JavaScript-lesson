@@ -3,43 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Изучаем JavaScript</title>
-<!--<script type="text/javascript" href="js/JavaScript.js"></script>-->
 </head>
 
 <body>
 	<script type="text/javascript">
-		var x = 6;
-		var y = 5;
+		var person;
+		//alert ("Hello, " + person);
 		
-		var bool = false;
-		
-		/*if(x < y){
-			document.write("x < y");
-			document.write("<br/>");
-			document.write("x < 5");
-		}*/
-		
-		if(x > y && bool == true){/* && логическое и, || логическое нет */
-			document.write("x > y");
+		if(confirm("Are you sure?")){
+			person = prompt("Hi what`s your name?");
+			alert ("Hello, " + person);			
+		} else {
+			alert("Person not sure");
 		}
-		else if (x == y) {
-			document.write("x = y");
-		}
-		else{
-			document.write("x < y");
-		}
-		document.write("<br/>");
-		/*var result = 5;
-		switch(result){
-			case 1: document.write("result = 1"); break;
-			case 2: document.write("result = 2"); break;
-			case 3: document.write("result = 3"); break;
-			case 4: document.write("result = 4"); break;
-			default: document.write("result > 4");
-		}
-		
-		document.write("<br/>");
-		x > y ? document.write("YES") : document.write("NO"); */
     </script>
 </body>
 </html>
