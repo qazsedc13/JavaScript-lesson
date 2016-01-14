@@ -8,16 +8,31 @@
 
 <body>
 	<script type="text/javascript">
-		// document.write("Hello World!");
-    	var number = 21;
-		var string;
-		string = "Hello World! ";
-		var floatNumber = 1.23;
-		var isTrue;
-		isTrue = true;
-		document.write("Variable number =" + number + "<br />" + string + floatNumber + "<br/>" + isTrue);
+		var x = 5;
+		var y;
+		var result;
+		y = 5;
+		result = x + y;
+		document.write(result);
+		result += x; //Можно так же забисать как result += x;
+		document.write("<br/>" + result);
+		result ++; 
+		document.write("<br/>" + result);
 		
-		
+		document.write("<br/>");
+		document.write(x + "+" + y + "=" + (x + y));
+		document.write("<br/>");
+		var str_1 = "12";
+		var str_2 = "24";
+		document.write(Number(str_1) + Number(str_2));
+		document.write("<br/>");
+		var bool;
+		var z = 6;
+		var d = 7;
+		bool = z < d;
+		document.write(bool);
+		document.write("<br/>");
+		document.write(10 + "%" + 7 + "=" + (10%7));
     </script>
 </body>
 </html>
