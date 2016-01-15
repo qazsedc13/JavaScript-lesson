@@ -3,27 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Изучаем JavaScript</title>
+    <script type="text/javascript">
+	   function buttonClick (button) {
+           alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + ".")
+       }
+    </script>
 </head>
 
 <body>
-	<script type="text/javascript">
-		var sum;
-		
-		function print (text){
-			document.write(text);
-		}
-		
-		print ("Hello");
-		print ("<br/>");
-		print ("World");
-		print ("<br/>");
-		
-		function count (x, y){
-			sum = x + y;
-		}
-		
-		count (5, 7);
-		print (sum);
-    </script>
+	<input type="button" name="b" value="Click me" onclick="buttonClick (this)" />
 </body>
 </html>
