@@ -7,15 +7,23 @@
 
 <body>
 	<script type="text/javascript">
-		var person;
-		//alert ("Hello, " + person);
+		var sum;
 		
-		if(confirm("Are you sure?")){
-			person = prompt("Hi what`s your name?");
-			alert ("Hello, " + person);			
-		} else {
-			alert("Person not sure");
+		function print (text){
+			document.write(text);
 		}
+		
+		print ("Hello");
+		print ("<br/>");
+		print ("World");
+		print ("<br/>");
+		
+		function count (x, y){
+			sum = x + y;
+		}
+		
+		count (5, 7);
+		print (sum);
     </script>
 </body>
 </html>
