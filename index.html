@@ -5,12 +5,19 @@
 <title>Изучаем JavaScript</title>
     <script type="text/javascript">
 	   function buttonClick (button) {
-           alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + ".")
+           alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + ".");
        }
+        var counter = 0;
+        function OnMousCounter (element){
+            counter ++;
+            element.innerHTML = "На этот текст было наведено " + counter + " раз";
+        }
     </script>
 </head>
 
-<body>
+<body onload="alert('Страница загружена')">
 	<input type="button" name="b" value="Click me" onclick="buttonClick (this)" />
+    
+    <span onmouseover="OnMousCounter (this)">На этот текст было наведено 0 раз</span>
 </body>
 </html>
