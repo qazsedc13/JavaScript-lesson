@@ -4,20 +4,24 @@
 <meta charset="utf-8">
 <title>Изучаем JavaScript</title>
     <script type="text/javascript">
-	   function buttonClick (button) {
-           alert("Вы нажали на кнопку. Кнопка имеет имя " + button.name + ", также value равно " + button.value + ".");
-       }
-        var counter = 0;
-        function OnMousCounter (element){
-            counter ++;
-            element.innerHTML = "На этот текст было наведено " + counter + " раз";
-        }
+	  function valid (){
+          
+      }
     </script>
 </head>
 
-<body onload="alert('Страница загружена')">
-	<input type="button" name="b" value="Click me" onclick="buttonClick (this)" />
-    
-    <span onmouseover="OnMousCounter (this)">На этот текст было наведено 0 раз</span>
+<body>
+	<form action="" method="post" name="test" onsubmit="valid()">
+        <label for="name">Имя:</label>
+        <input type="text" name="name" placeholder="Имя" id="name" /><br /><br />
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" placeholder="Пароль" id="password" /><br /><br />
+        <label for="RePassword">Проверка пароля:</label>
+        <input type="password" name="RePassword" placeholder="Проверка пароля" id="RePassword" /><br /><br />
+        <span>Пол:</span>
+        <input type="radio" name="state" id="male" value="Мужской" /><label for="male">Мужской:</label>
+        <input type="radio" name="state" id="female" value="Женский" /><label for="female">Женский:</label><br />
+        <input type="submit" name="submit" value="Готово" />
+    </form>
 </body>
 </html>
