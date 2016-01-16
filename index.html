@@ -7,9 +7,13 @@
 	  function valid (form){
           var fail = false;
           var name = form.name.value;
+          var email = form.email.value;
           var password = form.password.value;
           var RePassword = form.RePassword.value;
           var state = form.state.value;
+          
+          var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
+          
           if (name == "" || name == " ")
               fail = "Вы не ввели своё имя";
           else if (password == "")
@@ -22,8 +26,7 @@
           if (fail)
               alert(fail);
           else
-              window.location = "http://google.com"
-                        
+              window.location = "http://google.com"                        
       }
     </script>
 </head>
@@ -32,6 +35,8 @@
 	<form action="" method="post" name="test" id="form">
         <label for="name">Имя:</label>
         <input type="text" name="name" placeholder="Имя" id="name" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="text" name="email" placeholder="email" id="email" /><br /><br />
         <label for="password">Пароль:</label>
         <input type="password" name="password" placeholder="Пароль" id="password" /><br /><br />
         <label for="RePassword">Проверка пароля:</label>
