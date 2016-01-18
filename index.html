@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Изучаем JavaScript</title>
-    
-</head>
-
-<body>
-	<script type="text/javascript">
-        var id = setInterval("myFunct_1()", 1000);
+    <script type="text/javascript">
         var counter = 0;
-        
-        function myFunct_1 (){
+
+        function timer(){
             counter ++;
-            alert("Секунд прошло -" + counter);
-            if (counter == 3) clearInterval(id);
+            document.getElementById("count").innerHTML = counter;
+            setTimeout("timer()", 1000;);
         }
     </script>
+</head>
+
+<body onload="timer()">
+    Секунд прошло<span id="count"> -1</span>
+	
 </body>
 </html>
