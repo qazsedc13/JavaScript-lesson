@@ -7,10 +7,14 @@
 </head>
 <body>
 	<script type="text/javascript">
-        var arr = new Array(2, 3, 56, 12, 23, 590, 123, 2);
-        text = "Длина массива - " + arr.length;
-        text += "\nМассив состоит из - " + arr.join(", ");
-        text += "\nСортированный массив - " + (arr.sort()).join(", "); // при сортировке сравниваются только первые цифры (он их считает строками)        
+        var string = "Небольшая строка";
+       
+        var text = "Длина строки равна - " + string.length;
+        text += "\nСрока в верхнем регистре - " + string.toUpperCase();
+        text += "\nСрока в нижнем регистре - " + string.toLowerCase();
+        text += "\nОбрезанная строка - " + string.substring(1, 5);
+        text += "\n3-й символ это - " + string.charAt(3);
+        text += "\n'Стро' начинается с индекса - " + string.indexOf("стро");
         alert(text);
 	</script>
 </body>
