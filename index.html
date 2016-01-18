@@ -7,17 +7,25 @@
 </head>
 <body>
 	<script type="text/javascript">
-        var text = "Число PI - " + Math.PI;
-        text += "\nЧисло E - " + Math.E;
-        text += "\nМодуль -7 = " + Math.abs(7);
-        text += "\nСинус 0,3 = " + Math.sin(0.3);
-        text += "\nСлучайное число = " + Math.random();
-        text += "\nСлучайное число от 0 до 10 = " + Math.floor(Math.random() * 11);
+        var date = new Date();
+        text = "Год сейчас - " + date.getFullYear();
+        text += "\nМесяц сейчас - " + date.getMonth();
+        text += "\nДень сейчас - " + date.getDate();
+        text += "\nЧасов сейчас - " + date.getHours();
+        text += "\nМинут сейчас - " + date.getMinutes();
+        text += "\nСекунд сейчас - " + date.getSeconds();
+      //  alert(text);
         
-        //Math.floor(5.3);//округляет до наименьшего
-        //Math.ceil(5.6);//округляет до большего
-        
+        var date = new Date(2000, 0, 12, 14, 23, 43);
+        date.setMinutes(42);
+        text = "Год сейчас - " + date.getFullYear();
+        text += "\nМесяц сейчас - " + date.getMonth();
+        text += "\nДень сейчас - " + date.getDate();
+        text += "\nЧасов сейчас - " + date.getHours();
+        text += "\nМинут сейчас - " + date.getMinutes();
+        text += "\nСекунд сейчас - " + date.getSeconds();
         alert(text);
+        
 	</script>
 </body>
 </html>
