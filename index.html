@@ -7,25 +7,11 @@
 </head>
 <body>
 	<script type="text/javascript">
-        var date = new Date();
-        text = "Год сейчас - " + date.getFullYear();
-        text += "\nМесяц сейчас - " + date.getMonth();
-        text += "\nДень сейчас - " + date.getDate();
-        text += "\nЧасов сейчас - " + date.getHours();
-        text += "\nМинут сейчас - " + date.getMinutes();
-        text += "\nСекунд сейчас - " + date.getSeconds();
-      //  alert(text);
-        
-        var date = new Date(2000, 0, 12, 14, 23, 43);
-        date.setMinutes(42);
-        text = "Год сейчас - " + date.getFullYear();
-        text += "\nМесяц сейчас - " + date.getMonth();
-        text += "\nДень сейчас - " + date.getDate();
-        text += "\nЧасов сейчас - " + date.getHours();
-        text += "\nМинут сейчас - " + date.getMinutes();
-        text += "\nСекунд сейчас - " + date.getSeconds();
+        var arr = new Array(2, 3, 56, 12, 23, 590, 123, 2);
+        text = "Длина массива - " + arr.length;
+        text += "\nМассив состоит из - " + arr.join(", ");
+        text += "\nСортированный массив - " + (arr.sort()).join(", "); // при сортировке сравниваются только первые цифры (он их считает строками)        
         alert(text);
-        
 	</script>
 </body>
 </html>
