@@ -3,16 +3,21 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Изучаем язык JavaScript</title>
-	<script type="text/javascript">
-	var counter = 0;
-	function timer () {
-		counter++;
-		document.getElementById("count").innerHTML = counter
-		setTimeout("timer()", 1000);
-		}
-	</script>
+	
 </head>
-<body onload="timer()">
-	Секунд прошло <span id="count">-1</span>
+<body>
+	<script type="text/javascript">
+        var text = "Число PI - " + Math.PI;
+        text += "\nЧисло E - " + Math.E;
+        text += "\nМодуль -7 = " + Math.abs(7);
+        text += "\nСинус 0,3 = " + Math.sin(0.3);
+        text += "\nСлучайное число = " + Math.random();
+        text += "\nСлучайное число от 0 до 10 = " + Math.floor(Math.random() * 11);
+        
+        //Math.floor(5.3);//округляет до наименьшего
+        //Math.ceil(5.6);//округляет до большего
+        
+        alert(text);
+	</script>
 </body>
 </html>
