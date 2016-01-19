@@ -4,29 +4,24 @@
 	<meta charset="UTF-8" />
 	<title>Изучаем библиотеки jQuery</title>
     <script src="js/jquery-2.2.0.js"></script>
-    <script type="text/javascript">
-        function valid(){
-        var state = $('input[name="sex"]:checked').val();
-        $("#message").show();
-        if (!state) return $("#message").html("<font style='color:red'>Укажите ваш пол!</font><br />");
-        $("#message").hide();
-            if (state == "male")
-            $("#img").show();
-    }  
-    </script>
+    
 </head>
 <body>
-    <form name="form" id="form">
-        <label for="female">Женский</label>
-        <input type="radio" id="female" name="sex" value="female" />
-        <label for="male">Мужской</label>
-        <input type="radio" id="male" name="sex" value="male" />
-        <br /><br />
-        <span id="message"></span>
-        <input type="button" id="done" onclick="return valid()" value="Готово" />
-    </form>
+
+	<img src="1.jpg" alt="Изображение" title="Изображение" /><br />
+    <img src="2.jpg" /><br />
+    <img src="3.jpg" /><br />
+    <img src="4.jpg" alt="Изображение" title="Изображение" />
     
-    <img src="1.jpg" style="display:none" alt="1" id="img" />
-    
+	<script type="text/javascript">
+    	$(":not(img[alt])").attr("alt", "jQuery");
+		// расширенная функция not $("img").not("img[alt]");
+		var elements = $("img");
+		var text = "";
+		for(var i = 0; i < elements.length; i ++){
+			text += elements[i].alt + "\n";
+			}
+		alert(text);   
+    </script>        
 </body>
 </html>
