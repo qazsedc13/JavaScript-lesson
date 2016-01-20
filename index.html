@@ -7,21 +7,14 @@
    
 </head>
 <body>
-	<div id="div">Блок</div>
+	<div id="div">Блок
+    <p>Абзац</p>
+    </div>
 	<script type="text/javascript">
-    	$("#div").css("font-size", "25px");
-		$("#div").css("color", "red");
+		alert($("#div").html());//выводит всё включая теги
+		alert($("#div").text());//выводит всё без тегов
 		
-		$("#div").css("background-color", function(){
-			return "blue"
-			});
-			
-		$("#div").css("width", "250px");
-			
-		$("#div").css("height", function(){
-			var height = prompt("Введите высоту");
-			return height + "px";
-			});
+		$("p").html("<p>Новый абзац</p>"); // Заменяет содержимое    	
     </script>        
 </body>
 </html>
