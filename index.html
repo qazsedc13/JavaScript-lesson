@@ -4,24 +4,24 @@
 	<meta charset="UTF-8" />
 	<title>Изучаем библиотеки jQuery</title>
     <script src="js/jquery-2.2.0.js"></script>
-    <style>    	
-		.div_1 {
-			background-color:#E07474;}
-	
-		.div_2 {
-			background-color:#B7F5A2}
-    </style>
+   
 </head>
 <body>
-	<div id="div">Text</div>
-
+	<div id="div">Блок</div>
 	<script type="text/javascript">
-    	var div = prompt("1 или 2?");
-		while (div !=1 && div != 2){
-			alert("Пожалуйста введите число 1 или 2");
-			div = prompt("1 или 2?");} 	
-		$("#div").attr("class", "div_" + div);
-		alert($("#div").get(0).className);
+    	$("#div").css("font-size", "25px");
+		$("#div").css("color", "red");
+		
+		$("#div").css("background-color", function(){
+			return "blue"
+			});
+			
+		$("#div").css("width", "250px");
+			
+		$("#div").css("height", function(){
+			var height = prompt("Введите высоту");
+			return height + "px";
+			});
     </script>        
 </body>
 </html>
