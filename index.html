@@ -12,7 +12,10 @@
 		}
 	
 		$(document).ready(function() {
-            $("div").bind("click", incSize);
+            $("div").bind("click", incSize);//работает с уже созданными сразу после загрузки страницы
+			$(document).on("click", "p", function(){
+				alert("test");	
+			});//работает с тегами созданными после загрузки страницы и с заранее созданными
         });
     </script>
 </head>
