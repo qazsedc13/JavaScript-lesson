@@ -6,7 +6,7 @@
     <script src="js/jquery-2.2.0.js"></script>
    	<script type="text/javascript">
 		function incSize(event){
-			alert (event.target.style.width);
+			alert (Number(event.target.style.width.substring(0, event.target.style.width.length - 2)));
 		}
 	
 		$(document).ready(function() {
