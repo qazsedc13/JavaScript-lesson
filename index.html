@@ -7,23 +7,11 @@
    
 </head>
 <body>
-	<div id="div"><p>Абзац</p></div>
-    <div id="div_2"></div>
-    <img src="1.png" alt="" />
-    <img src="2.png" alt="" />
-    <img src="3.png" alt="" /><br />
-    
-    <a href="#">1</a>
-    <a href="#">2</a>
-    
+
+	<div>Блок</div>
+	    
 	<script type="text/javascript">
-		  	$("div").append("<span>Простой текст</span>"); // Всегда вставляет в конец, после всего кода
-			$("img").appendTo($("#div_2"));
-			
-			$("a").wrap("<p class='hrefs'></p>");// обертывание элементов
-			
-			$("#div").remove();
-			$("#div_2").empty();
+		$("<p>Небольшой текст</p>").appendTo("div");		 
     </script>        
 </body>
 </html>
