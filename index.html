@@ -4,12 +4,19 @@
 	<meta charset="UTF-8" />
 	<title>Изучаем библиотеки jQuery</title>
     <script src="js/jquery-2.2.0.js"></script>
-   <script type="text/javascript">
-
+   	<script type="text/javascript">
+		function incSize(event){
+			alert (event.target.style.width);
+		}
+	
+		$(document).ready(function() {
+            $("div").bind("click", incSize);
+        });
     </script>
 </head>
 <body>
-
-
+	<div style="height:50px; width:50px; background-color:red"></div>
+    <div style="height:50px; width:50px; background-color:blue"></div>
+    <div style="height:50px; width:50px; background-color:green"></div>
 </body>
 </html>
