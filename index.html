@@ -5,23 +5,34 @@
 	<title>Изучаем библиотеки jQuery</title>
     <script src="js/jquery-2.2.0.js"></script>
    	<script type="text/javascript">
-		function incSize(event){
-			var width = Number(event.target.style.width.substring(0, event.target.style.width.length - 2));
-			event.target.style.width = (width + 5) + "px";
-			$("<p>Координаты мышки при нажатии: x-" + event.screenX + ", y - " + event.screenY + "</p>").insertAfter("div:last");
-		}
-	
 		$(document).ready(function() {
-            $("div").bind("click", incSize);//работает с уже созданными сразу после загрузки страницы
-			$(document).on("click", "p", function(){
-				alert("test");	
-			});//работает с тегами созданными после загрузки страницы и с заранее созданными
-        });
+            $(document).on("click", "#add_comment", function(){
+				var form = $("form[name='form']");
+				form.css("display", "block");
+				$("#add_comment").replaceWith(form);	
+			});
+			
+			$(document).on("click", "input[name='send']", function(){
+				var comment = $("textarea[name='comment']").val();
+				alert("Подождите идёт загрузка комментариев...");
+				$("<p>" + comment + "</p>").appendTo("div#comments");	
+			});
+			
+        });	
     </script>
 </head>
 <body>
-	<div style="height:50px; width:50px; background-color:red"></div>
-    <div style="height:50px; width:50px; background-color:blue"></div>
-    <div style="height:50px; width:50px; background-color:green"></div>
+	<div id="comments">
+    	<p>Комментарий №1</p>
+        <p>Комментарий №2</p>
+        <p>Комментарий №3</p>
+    </div>
+    
+    <form name="form" action="#" method="post" id="form" style="display:none" onSubmit="return false">
+    	<textarea id="textarea" name="comment" cols="30" rows="10"></textarea><br />
+        <input type="submit" value="Добавить комментарий" name="send" id="done" />
+    </form>
+    
+    <a href="#" onClick="return false" id="add_comment">Добавить комментарий</a>
 </body>
 </html>
