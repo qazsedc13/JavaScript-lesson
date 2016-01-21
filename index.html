@@ -2,24 +2,37 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Изучаем библиотеки jQuery</title>
+	<title>Выбор случайного цвета</title>
     <script src="js/jquery-2.2.0.js"></script>
    	<script type="text/javascript">
 		$(document).ready(function() {
-            $("#img").bind("click", function(event){
-					$(event.target).parent().css("text-align", "center");//функция parent() берёт родительский элемент у данного элемента
-					$(event.target).animate({
-						width: $(event.target).width() * 5,
-						height: $(event.target).height() * 5,
-					}, 3000);
+			
+			$("#addBlock").click(function(){
+				var randName = GetNumber(1, 700);
+				$('#block').prepend("<div class='block " + randName + "'>" + randName + "</div>");
+				
+				$('.' + randName).css("background", "#" + GetNumber(0, 9) + GetNumber(0, 9) + GetNumber(0, 9) + GetNumber(0, 9) + GetNumber(0, 9) + GetNumber(0, 9));
+				
 			});
+			
+           	function GetNumber(min, max){
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			} 
         });
     </script>
+    
+    <style>
+    	.block {
+			width:200px;
+			height:200px;
+			margin-bottom:20px;
+			border-radius:5px;
+			text-align:center	
+		}
+    </style>
 </head>
 <body>
-	
-    <p id="test">
-		<img src="http://www.alfaplan.ru/Privatnyi%20dom/House%2038A_.jpg" alt="Изображение" title="Изображение" id="img" width="200"/>    
-    </p>        
+	<button id="addBlock">Добавить блок</button><br />
+    <div id="block"></div>
 </body>
 </html>
