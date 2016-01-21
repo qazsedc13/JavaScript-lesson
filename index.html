@@ -5,13 +5,21 @@
 	<title>Изучаем библиотеки jQuery</title>
     <script src="js/jquery-2.2.0.js"></script>
    	<script type="text/javascript">
-		
+		$(document).ready(function() {
+            $("#img").bind("click", function(event){
+					$(event.target).parent().css("text-align", "center");
+					$(event.target).animate({
+						width: $(event.target).width() * 10,
+						height: $(event.target).height() * 10,
+					}, 3000);
+			});
+        });
     </script>
 </head>
 <body>
 	
     <p id="test">
-		<img src="http://www.alfaplan.ru/Privatnyi%20dom/House%2038A_.jpg" alt="Изображение" title="Изображение"/>    
+		<img src="http://www.alfaplan.ru/Privatnyi%20dom/House%2038A_.jpg" alt="Изображение" title="Изображение" id="img" width="200"/>    
     </p>        
 </body>
 </html>
