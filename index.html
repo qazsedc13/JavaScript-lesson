@@ -7,10 +7,10 @@
    	<script type="text/javascript">
 		$(document).ready(function() {
             $("#img").bind("click", function(event){
-					$(event.target).parent().css("text-align", "center");
+					$(event.target).parent().css("text-align", "center");//функция parent() берёт родительский элемент у данного элемента
 					$(event.target).animate({
-						width: $(event.target).width() * 10,
-						height: $(event.target).height() * 10,
+						width: $(event.target).width() * 5,
+						height: $(event.target).height() * 5,
 					}, 3000);
 			});
         });
