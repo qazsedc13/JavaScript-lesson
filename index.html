@@ -7,18 +7,17 @@
    
 </head>
 <body>
-	<div id="div" style="background-color:red">
-    	Блок
-    	<p>Абзац</p>
-    </div>
+	<div id="div"><p>Абзац</p></div>
+    <div id="div_2"></div>
+    <img src="1.png" alt="" />
+    <img src="2.png" alt="" />
+    <img src="3.png" alt="" />
+    
+    <a href="#">1</a>
+    <a href="#">2</a>
+    
 	<script type="text/javascript">
-		var block = $("#div").clone();
-		
-		block.html("<p>Новый абзац</p>");
-		block.css("font-size", "40px");
-		block.css("width", "200px");
-		
-		$("body").append(block);   	
+		  	$("div").append("<span>Простой текст</span>>")
     </script>        
 </body>
 </html>
