@@ -5,54 +5,30 @@
 <title>Test</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>
-	function funcBefore(){
-		$("#information").text("Ожидание данных...");
-	}
-	
-	function funcSuccess(data){
-		$("#information").text(data);
-	}
-	
-	$(document).ready(function (){
-		$("#load").bind("click", function (){
-		var admin = "Admin";
-			$.ajax({
-				url: "content.php",
-				type: "POST",
-				data: ({name: admin, number: 5}),
-				dataType:"html",
-				beforeSend: funcBefore,
-				success: funcSuccess	
+	$(document).ready(function() {
+        $("select[name='country']").bind("change", function (){
+			$("select[name='city']").empty();
+			$.get("countryCheck.php", {country:$("select[name='country']").val()}, function (data){
+				data = JSON.parse(data);
+				for (var id in data){
+					$("select[name='city']").append($("<option value='" + id +"'>" + data[id] + "</option>"));
+				};
 			});	
-		});	
-		
-		$("#done").bind("click", function (){
-			$.ajax({
-				url: "check.php",
-				type: "POST",
-				data: ({name: $("#name").val()}),
-				dataType:"html",
-				beforeSend: function (){
-					$("#information").text("Ожидание данных...");	
-				},
-				success: function (data){
-					if (data == "Fail")
-						alert("Имя занято");
-					else
-						$("#information").text(data);	
-				}	
-			});	
-		});	
-	});
-	
-	
+		});
+    });
 </script>
 </head>
 
 <body>
-	<input type="text" id="name" placeholder="Введите имя"/>
-    <input type="button" id="done" value="Готово"/>
-	<p id="load" style="cursor:pointer">Загрузить данные</p>
-	<div id="information"></div>
+	<label>Укажите страну</label>
+    <select name="country">
+    	<option value="0" selected="selected"></option>
+        <option value="1">США</option>
+        <option value="2">Франция</option>
+    </select>
+    <label>Города</label>
+    <select name="city">
+		<option value="0"></option>    
+    </select>
 </body>
 </html>
