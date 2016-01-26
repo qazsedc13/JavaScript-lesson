@@ -1,19 +1,17 @@
 ﻿<?php
-	$string = "Example";
-	$num = 0;
-	$bool = $string == true;
-
-	echo "$bool = $string == true"; //Строка есть, значит true
+	$x = 10;
+	$y = 5;
+	if ($x == $y && $x != 12 && $y == 5 && ($x + 5) == 15){
+		echo 'Всё сработало';}
+	else if ($x == 15 || $y != 7){
+		$num = 5;
+		echo "Число № ".$num;	
+	}
+	else {
+		echo 'Ура';
+	}
 	
-	$bool_2 = $num == "";
-	
-	echo "<br />$bool_2 = $num == \"\"<hr/>";// Проверяем число и строчку, они равны, благодаря тому, что в php 0 и пустая строчка это false
-	
-	$bool_3 = $string === true;
-	
-	echo "<br />$bool_3 = $string === true";// поверка типа переменных
-	
-	$bool_4 = $num === "";
-	
-	echo "<br />$bool_4 = $num === \"\"";
+	$x == $y ? $string = "Да" : $string = "Нет";
+	echo "<br />";
+	echo $string;
 ?>
