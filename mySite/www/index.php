@@ -1,24 +1,21 @@
 ﻿<?php
-	for ($i = 100; $i >= 80; $i-=2) {
-		if ($i % 5 == 0) continue; // останавливает цикл на данной операции
-		if ($i <= 87) break;
-		echo "Цикл под номером $i<br />";	
+	function printWords ($word){// Просто выводит на экран
+		echo $word;	
 	}
-	echo "<hr />";
 	
-	$x = 0;
-	
-	while ($x < 10){
-		echo "Итерация под номером № $x<br />";
-		$x++;	// отличие от for в том что x++ выносится за wile
+	function math ($first, $second){
+		$summa = $first + $second;
+		return $summa;
 	}
-	echo "<hr />";
 	
-	$z = 10;
+	$x = 12;
+	$y = 35;
 	
-	do { // в этом цикле всегда есть хотя бы одна итерация
-		echo "Операция выполнилась только один раз";
-		$z++;
-	} while ($z < 5);
+	$sum = $x + $y;
+	printWords($sum);
+	$x = 13;
+	$sum = math($x, $y);
+	printWords($sum);
 	
+		
 ?>
