@@ -1,5 +1,8 @@
 ﻿<?php
-	print_r ($_POST);
-	
-	echo "<br />".$_GET["name"];
+	if ($_POST["name"] == ""){
+		echo "Введите имя. <a href='/'>Исправить</a>";
+	}
+	else 
+		header("Location:index.php");
+		
 ?>
