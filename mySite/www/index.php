@@ -1,5 +1,6 @@
 ﻿<?php
-	function printWords ($word){// Просто выводит на экран
+	function printWords ($word, $x, $y){// В функции можно вызываь другую функцию
+		$word = math($x, $y);
 		echo $word;	
 	}
 	
@@ -11,11 +12,6 @@
 	$x = 12;
 	$y = 35;
 	
-	$sum = $x + $y;
-	printWords($sum);
-	$x = 13;
-	$sum = math($x, $y);
-	printWords($sum);
-	
+	printWords($sum, $x, $y);
 		
 ?>
