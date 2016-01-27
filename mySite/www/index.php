@@ -12,4 +12,19 @@
 	for ($i = 0; $i < count ($array); $i++){
 		echo "Элемент массива с индексом $i = ".$array[$i]."<br />";	
 	}
+	
+	$list = array ("age" => 12, "name" => "Alex", "schoolBoy" => true); // Цикл for не применяется для ассациативных массивов
+	
+	$list["age"] = 10;
+	
+	$summa = 0;
+	
+	echo "<hr />".getAverage(array("first" => 12, "sec" => 45, "third" => 23, "forth" => 55));
+	
+	function getAverage ($array){
+		foreach ($array as $key => $value){// этот цикл используется только для ассщциативных массивов
+			$summa += $value;
+		}
+		return $summa / count ($array);
+	}
 ?>
