@@ -1,5 +1,5 @@
 ﻿<?php
-	$title = "Главная страница";
+	$title = "О компании";
 	require "header.php";
 	echo "Тело документа";
 	require "footer.php";
