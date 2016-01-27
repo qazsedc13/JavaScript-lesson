@@ -1,4 +1,12 @@
-﻿<!doctype html>
+﻿<?php
+if (isset($_POST["done"])){
+	if ($_POST["name"] == "")
+		echo "Введите имя. <a href='/'>Исправить</a>";
+	else 
+		header("Location:index.php");
+}
+?>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
