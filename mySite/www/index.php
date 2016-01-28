@@ -1,8 +1,6 @@
 ﻿<?php
-	//setcookie("num", 10, time() + 7);// добавили
-	echo $_COOKIE["num"];
-	if(isset($_COOKIE["num"])){
-		echo "Кука установлена";
-	} else
-		echo "Кука не установлена";
+	$num = (isset($_COOKIE["num"])) ? $_COOKIE["num"] : 0;
+	$num ++;
+	setcookie ("num", $num, time() + 4);
+	echo "Пользователь обновил страничку $num раз";	
 ?>
