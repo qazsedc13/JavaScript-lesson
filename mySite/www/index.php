@@ -15,4 +15,5 @@
 	 
 	 echo "----------------------<br />";
 	 file_put_contents("c.txt", "TEST test Test");//укороченная запись (здесь мы создаём файл и записываем в него строку)
+	 echo file_get_contents("c.txt")."<br />";
 ?>
