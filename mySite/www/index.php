@@ -6,6 +6,9 @@
 		$subject = htmlspecialchars($_POST["subject"]);
 		$message = htmlspecialchars($_POST["message"]);
 		$_SESSION["from"] = $from;
+		$_SESSION["to"] = $to;
+		$_SESSION["subject"] = $subject;
+		$_SESSION["message"] = $message;
 	}
 ?>
 <!doctype html>
