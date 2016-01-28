@@ -18,4 +18,8 @@
 	 echo file_get_contents("c.txt")."<br />";
 	 echo file_exists("a.txt")."<br />";
 	 echo filesize("c.txt")."<br />";
+	 
+	 rename ("c.txt", "b.txt");//переименовывает файл
+	 
+	 unlink ("b.txt");//удаляет файл
 ?>
