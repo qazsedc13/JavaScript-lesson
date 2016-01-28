@@ -1,27 +1,47 @@
 ﻿<?php
-	$string = "This is example!";
+	$array = array(12, 17, 5, 23, 56);
 	
-	echo strlen($string)."<br />";// Длина строки
-	echo strpos($string, "exa")."<br />";// ищет в заданной строке совпадени с некоторыми символами, выдаёт номер 
-	echo strpos($string, "is", 4)."<br />";// начать поиск с 4 элемента
+	echo count($array)."<br />";
+	sort ($array);
+	print_r($array);
+	echo "<br />";
+	rsort ($array);//сортировка по убыванию
+	print_r($array);
+	echo "<br />";
+	asort ($array);//сортировка по возрастанию ассоциативных массивов (запоминает ключи)
+	print_r($array);
+	echo "<br />";
+	arsort ($array);
+	print_r($array);
+	echo "<br />";
 	
-	if (strpos($string, "T") == false) echo "T не найдено<br />";// выдаст T не найдено, т.к. т первый символ, а в массиве значит нулевой символ, соответствнно 0 это false 
-	if (strpos($string, "T") === false) echo "T не найдено<br />";//поэтому надо использовать оператор эквивалентности
-	else echo "T найдено<br />";
+	$alist = array("123" => 23, "12" => 45);
+	ksort ($alist);//Сортировка по колючам по возрастанию
+	print_r($alist);
+	echo "<br />";
+	krsort ($alist);//Сортировка по колючам по убыванию
+	print_r($alist);
+	echo "<br />";
 	
-	echo substr($string, 3, 7)."<br />";// Обрезает строку по определённым параметрам
-	echo substr($string, 3, -2)."<br />";//Удаляет первые 3 символа и 2 с конца
-	//echo str_replace("is", "abc", $string)."<br />"; // Заменяет символы is на abc в выбранной строке
-	echo str_replace(array("is", "ple"), array("abc", "123"), $string)."<hr />";// массивы должны быть одинаковые
+	shuffle($array);// перемешивание значений
+	print_r($array);
+	echo "<br />";
 	
-	$str = "<b>ХАХА, жирный шрифт</b>";
+	echo in_array(12, $array);//проверяем есть ли такой элемент в массиве
+	echo "<br />";
 	
-	echo htmlspecialchars ($str);// всегда стоит получать данные от пользователя с использованием htmlspecialchars, чтобы пользователи не могли отправлять теги. Так можно отправить вредоносный скрипт
+	$arr_1 = array (10, 2);
+	$arr_2 = array (4, 5, 7);
 	
-	echo "<br />".strtolower($string);// перевод в нижний регистр
-	echo "<br />".strtoupper($string)."<hr />";// перевод в верхний регистр
+	$array_3 = array_merge($arr_1, $arr_2);// объединение двух массивов
+	print_r ($array_3);
+	echo "<br />";
+		
+	$arrDone = array (1, 2, 3, 4, 5, 6, 7);
+	print_r ($arrDone);
+	echo "<br />";
 	
-	echo md5("123")."<hr />";//Кодировка, например используется для передачи пароля в базу данных, при регистрации пользователя на сайте
-	
-	echo trim("  string      sd  sd");//удаляет пробелы в начале и конце строки
+	$arrDone = array_slice($arrDone, 1, -2);// указываем массив, указываем сколько элементов с начала откинут, указываем сколько элементов показать
+	print_r ($arrDone);
+	echo "<br />";
 ?>
