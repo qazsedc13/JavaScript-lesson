@@ -1,6 +1,7 @@
 ﻿<?php
-	$num = (isset($_COOKIE["num"])) ? $_COOKIE["num"] : 0;
+	session_start();
+	$num = (isset($_SESSION["num"])) ? $_SESSION["num"] : 0;
 	$num ++;
-	setcookie ("num", $num, time() + 4);
+	$_SESSION["num"] = $num;
 	echo "Пользователь обновил страничку $num раз";	
 ?>
