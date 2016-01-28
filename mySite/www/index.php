@@ -1,6 +1,9 @@
 ﻿<?php
 	if (isset($_POST["send"])){
-		print_r ($_POST);	
+		$from = htmlspecialchars($_POST["from"]);
+		$to = htmlspecialchars($_POST["to"]);	
+		$subject = htmlspecialchars($_POST["subject"]);
+		$message = htmlspecialchars($_POST["message"]);		
 	}
 ?>
 <!doctype html>
