@@ -17,4 +17,5 @@
 	 file_put_contents("c.txt", "TEST test Test");//укороченная запись (здесь мы создаём файл и записываем в него строку), каждый раз создаётся заново
 	 echo file_get_contents("c.txt")."<br />";
 	 echo file_exists("a.txt")."<br />";
+	 echo filesize("c.txt")."<br />";
 ?>
