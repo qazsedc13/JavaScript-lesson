@@ -1,4 +1,9 @@
-﻿<!doctype html>
+﻿<?php
+	if (isset($_POST["send"])){
+		print_r ($_POST);	
+	}
+?>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
