@@ -11,5 +11,7 @@
 	
 	$mysqli->query("UPDATE `users` SET `reg_date` = '2345' WHERE `id` =4");
 	
+	$mysqli->query("DELETE FROM `users`");
+	
 	$mysqli->close();
 ?>
