@@ -30,6 +30,12 @@
 			$error_message = "Введите сообщение";
 			$error = true;	
 		}
+		if (!$error){
+			$subject = "=?utf-8?B?".base64_encode($subject)."?=";
+			$headers = "From: $from\r\nReply-to: $to\r\nContent-type: text/plain; charset=utf-8\r\n";
+			mail ($to, $subject, $message, $headers);
+			header ("Location: success.php");	
+		}
 	}
 ?>
 <!doctype html>
