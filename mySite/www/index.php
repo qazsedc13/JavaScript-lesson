@@ -22,13 +22,13 @@
 	<h1>Форма обратной связи</h2>
     <form name="feedback" action="" method="post">
     	<label>От кого:</label><br />
-        <input type="text" name="from" /><br />
+        <input type="text" name="from" value="<?=$_SESSION["from"]?>" /><br />
         <label>Кому:</label><br />
-        <input type="text" name="to" /><br />
+        <input type="text" name="to" value="<?=$_SESSION["to"]?>" /><br />
         <label>Тема:</label><br />
-        <input type="text" name="subject" /><br />
+        <input type="text" name="subject" value="<?=$_SESSION["subject"]?>"/><br />
         <label>Сообщение:</label><br />
-        <textarea name="message" cols="30" rows="10"></textarea><br />
+        <textarea name="message" cols="30" rows="10" ><?=$_SESSION["message"]?></textarea><br />
         <input type="submit" name="send" value="Отправить"/>
     </form>
 </body>
