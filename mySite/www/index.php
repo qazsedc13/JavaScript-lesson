@@ -4,28 +4,29 @@
 		$from = htmlspecialchars($_POST["from"]);
 		$to = htmlspecialchars($_POST["to"]);	
 		$subject = htmlspecialchars($_POST["subject"]);
-		$message = htmlspecialchars($_POST["message"]);		
+		$message = htmlspecialchars($_POST["message"]);
+		$_SESSION["from"] = $from;
 	}
 ?>
 <!doctype html>
 <html>
 <head>
-<meta charset="ANSI">
-<title>Обратная связь</title>
+<meta charset="utf-8">
+<title>РћР±СЂР°С‚РЅР°СЏ СЃРІСЏР·СЊ</title>
 </head>
 
 <body>
-	<h1>Форма обратной связи</h2>
+	<h1>Р¤РѕСЂРјР° РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё</h2>
     <form name="feedback" action="" method="post">
-    	<label>От кого:</label><br />
+    	<label>РћС‚ РєРѕРіРѕ:</label><br />
         <input type="text" name="from" /><br />
-        <label>Кому:</label><br />
+        <label>РљРѕРјСѓ:</label><br />
         <input type="text" name="to" /><br />
-        <label>Тема:</label><br />
+        <label>РўРµРјР°:</label><br />
         <input type="text" name="subject" /><br />
-        <label>Сообщение:</label><br />
+        <label>РЎРѕРѕР±С‰РµРЅРёРµ:</label><br />
         <textarea name="message" cols="30" rows="10"></textarea><br />
-        <input type="submit" name="send" value="Отправить"/>
+        <input type="submit" name="send" value="РћС‚РїСЂР°РІРёС‚СЊ"/>
     </form>
 </body>
 </html>
