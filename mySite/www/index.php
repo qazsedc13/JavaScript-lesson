@@ -9,5 +9,7 @@
 		$mysqli->query("INSERT INTO `users` (`login`, `password`, `reg_date`) VALUES ('$i', '".md5("$i")."', '".time ()."')");
 	}
 	
+	$mysqli->query("UPDATE `users` SET `reg_date` = '2345' WHERE `id` =4");
+	
 	$mysqli->close();
 ?>
