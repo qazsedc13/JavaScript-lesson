@@ -29,5 +29,8 @@
 	$result_set = $mysqli->query ("SELECT * FROM  `users` WHERE `login` LIKE '%ser%'");
 	printResult ($result_set);
 	
+	$result_set = $mysqli->query ("SELECT COUNT (`id`) FROM `users`");
+	printResult ($result_set);
+	
 	$mysqli->close();
 ?>
