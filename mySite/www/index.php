@@ -16,5 +16,8 @@
 	$result_set = $mysqli->query ("SELECT `id`, `login` FROM  `users` WHERE `id` > 7");
 	printResult ($result_set);
 	
+	$result_set = $mysqli->query ("SELECT * FROM  `users` WHERE `id` < 8 ORDER BY `id` ASC");
+	printResult ($result_set);
+	
 	$mysqli->close();
 ?>
