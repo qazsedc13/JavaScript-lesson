@@ -13,7 +13,7 @@
 	$result_set = $mysqli->query ("SELECT * FROM  `users`");
 	printResult ($result_set);
 	
-	$result_set = $mysqli->query ("SELECT `id` FROM  `users`");
+	$result_set = $mysqli->query ("SELECT `id`, `login` FROM  `users`");
 	printResult ($result_set);
 	
 	$mysqli->close();
