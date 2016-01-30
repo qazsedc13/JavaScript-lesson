@@ -1,17 +1,16 @@
 <?php
+	function printResult ($result_set) {
+		while (($row = $result_set->fetch_assoc()) != false) {
+			print_r ($row);
+			//echo $row("login");
+			echo "<br />";	
+		}	
+		echo "Количество записей равно - ".$result_set->num_rows."<br />------------------------------";
+	}
 	$mysqli = new MySQLi ("localhost", "root", "", "mybase");// должен предоставить хостер
 	$mysqli->query("SET NAMES 'utf8'");
 	
-	$success = $mysqli->query("INSERT INTO `users` (`login`, `password`, `reg_date`) VALUES ('123', '".md5("123")."', '".time ()."')");
-	echo $success;	
-	
-	for($i = 1; $i < 10; $i++){
-		$mysqli->query("INSERT INTO `users` (`login`, `password`, `reg_date`) VALUES ('$i', '".md5("$i")."', '".time ()."')");
-	}
-	
-	$mysqli->query("UPDATE `users` SET `reg_date` = '2345' WHERE `id` =4");
-	
-	$mysqli->query("DELETE FROM `users` WHERE `id` > 4 AND `id` < 7");
-	
+	$result_set = $mysqli->query ("SELECT * FROM  `users`");
+	printResult ($result_set);
 	$mysqli->close();
 ?>
